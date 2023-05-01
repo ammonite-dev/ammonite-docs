@@ -1,0 +1,4 @@
+node_modules/
+src/ammonite-md-wasm/target/
+
+Dockerenv
