@@ -16,13 +16,19 @@ export enum AppRoute {
 	DocsWebsite101Head = '/docs/website_101/head',
 	DocsWebsite101Body = '/docs/website_101/body',
 
+	DocsSyntax = '/docs/syntax',
 	DocsSyntaxMetadata = '/docs/syntax/metadata',
 	DocsSyntaxParagraph = '/docs/syntax/paragraph',
-	DocsSyntaxHeading = '/docs/syntax/heading',
+	DocsSyntaxHeadings = '/docs/syntax/headings',
 	DocsSyntaxBlockquotes = '/docs/syntax/blockquotes',
-	DocsSyntaxTemplates = '/docs/syntax/templates',
+	DocsSyntaxLists = '/docs/syntax/lists',
+	DocsSyntaxCodeBlocks = '/docs/syntax/code_blocks',
+	DocsSyntaxImages = '/docs/syntax/images',
+	DocsSyntaxLinks = '/docs/syntax/links',
+	DocsSyntaxRawHTML = '/docs/syntax/raw_html',
 
 	DocsTemplates = '/docs/templates',
+	DocsTemplatesSyntax = '/docs/templates/syntax',
 	DocsTemplatesCustom = '/docs/templates/custom',
 	DocsTemplatesBuiltIn = '/docs/templates/built_in',
 

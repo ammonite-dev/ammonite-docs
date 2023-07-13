@@ -1,5 +1,6 @@
 <script>
 	import { COMPANY_NAME } from '$lib/constants/company';
+	import { AppRoute } from '$lib/constants/routes';
 </script>
 
 <div class="tech_doc">
@@ -17,10 +18,11 @@
 	</p>
 	<h2>Usage</h2>
 	<p>
-		To get started, first create a code block like we would with {COMPANY_NAME}'s templates. Except
-		this time, we will be specifying <span class="inline_code">ammonite_head</span>. Inside this
-		code block, we can specify a JSON object with a version attribute and a title attribute. The
-		version lets us know which version of <span class="inline_code">ammonite_head</span>
+		To get started, first create a code block at the top of the Markdown document like we would with {COMPANY_NAME}'s
+		templates. Except this time, we will be specifying
+		<span class="inline_code">ammonite_head</span>. Inside this code block, we can specify a JSON
+		object with a version attribute and a title attribute. The version lets us know which version of
+		<span class="inline_code">ammonite_head</span>
 		we want to use, in case we introduce breaking changes in the future. The title lets us set the title
 		of our page.
 	</p>
@@ -28,39 +30,11 @@
 			>{`\`\`\`ammonite_head
 {
     "version": 1,
-    "title": "My first page with a title",
+    "data": {
+		"title": "My first page with a title",
+	}
 }
 \`\`\``}</code
 		></pre>
-	<p>
-		In addition to these attributes, we also introduce the <span class="inline_code">meta</span> attribute.
-		This attribute allows users to configure certain meta tags of the web page. Here are some common
-		meta tags websites have.
-	</p>
-	<pre><code
-			>{`\`\`\`ammonite_head
-{
-    "version": 1,
-    "title": "My first page with a title",
-    "meta": [
-        {
-            "name": "description",
-            "content": "The first page I created"
-        },
-        {
-            "name": "twitter:card",
-            "content": "Heres a summary for my friends on Twitter!"
-        },
-        {
-            "property": "og:url",
-            "content": "https://ammonite.dev/proj/my_project/p/my_page"
-        },
-        {
-            "property": "og:image",
-            "content": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png"
-        }
-    ]
-}
-\`\`\``}</code
-		></pre>
+	<p>To learn more, checkout <a href={AppRoute.DocsTemplatesAmmoniteHead}>ammonite_head</a></p>
 </div>

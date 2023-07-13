@@ -6,7 +6,7 @@
 <div class="tech_doc">
 	<h1>The <span class="inline_code">head</span> Element</h1>
 	<p>
-		Almost all websites have a <span class="inline_code">&lt;head&gt;</span>. This element is
+		Nearly all websites have a <span class="inline_code">&lt;head&gt;</span>. This element is
 		responsible for everything that does not appear on the page. Users can place elements within the
 		<span class="inline_code">&lt;head&gt;</span>
 		element to configure many aspects of the website. This includes, but not limited to:
