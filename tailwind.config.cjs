@@ -16,9 +16,23 @@ const PALETTE_1 = {
 	900: '#907191'
 };
 
+const BRAND_PRIMARY = {
+	100: '#FDE9D8',
+	300: '#FBD4B1',
+	500: '#F8B377',
+	700: '#FF963A'
+};
+
+const BRAND_SECONDARY = {
+	100: '#D4B1FC',
+	300: '#BE89FA',
+	500: '#A863F8',
+	700: '#8E35F5'
+};
+
 /** @type {import('tailwindcss').Config} */
 const config = {
-	content: ['./src/**/*.{html,js,svelte,ts,rs}'],
+	content: ['./src/**/*.{html,js,svelte,ts,rs,liquid}'],
 	darkMode: 'class',
 	theme: {
 		boxShadow: {
@@ -46,6 +60,12 @@ const config = {
 		},
 		extend: {
 			colors: {
+				errorDark: '#f8183e',
+				errorLight: '#fca3b2',
+				successDark: '#07D95A',
+				successLight: '#9CF0BD',
+				primary: BRAND_PRIMARY,
+				secondary: BRAND_SECONDARY,
 				palette: PALETTE_1,
 				light: {
 					primary: PALETTE_1[900],
