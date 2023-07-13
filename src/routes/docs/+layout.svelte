@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Sidebar from './Sidebar.svelte';
 	import { page } from '$app/stores';
+	import Hamburger from './Hamburger.svelte';
 
 	const pageTitle = 'Ammonite Docs';
 	const pageDescription = 'Learn how to use Ammonite to generate great wiki pages';
@@ -26,13 +27,20 @@
 	<meta property="og:description" content={pageDescription} />
 </svelte:head>
 
-<div class="flex flex-row flex-nowrap">
-	<div class="pr-4">
-		<div class="w-52 overflow-y-auto max-h-screen border border-white/0 border-r-white">
+<div class="flex sm:flex-row flex-col flex-nowrap">
+	<div>
+		<!-- Desktop sidebar -->
+		<div
+			class="sm:block hidden pr-4 w-52 overflow-y-auto max-h-screen border border-white/0 border-r-white"
+		>
 			<Sidebar path={$page.url.pathname} />
 		</div>
+		<!-- Mobile hamburger -->
+		<div class="sm:hidden block sm:p-0 px-4">
+			<Hamburger path={$page.url.pathname} open={false} />
+		</div>
 	</div>
-	<div class="min-w-0">
+	<div class="min-w-0 px-4">
 		<slot />
 	</div>
 </div>
