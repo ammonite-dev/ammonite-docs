@@ -1,14 +1,3 @@
-<script>
-	import {
-		ARTICLE_H1_STYLE,
-		ARTICLE_H2_STYLE,
-		ARTICLE_H3_STYLE,
-		ARTICLE_H4_STYLE,
-		ARTICLE_H5_STYLE,
-		ARTICLE_H6_STYLE
-	} from '$lib/styles/article_content';
-</script>
-
 <div class="tech_doc">
 	<h1>Headings</h1>
 	<p>

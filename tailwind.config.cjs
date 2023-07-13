@@ -20,7 +20,8 @@ const BRAND_PRIMARY = {
 	100: '#FDE9D8',
 	300: '#FBD4B1',
 	500: '#F8B377',
-	700: '#FF963A'
+	700: '#FF963A',
+	900: '#a14a00'
 };
 
 const BRAND_SECONDARY = {
