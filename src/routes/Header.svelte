@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { GOOGLE_FORM, LOGO_NAME } from '$lib/constants/company';
-	import { BACKGROUND_COLOR, BACKGROUND_COLOR_HOVER, FONT_COLOR } from '$lib/constants/colors';
-	import HamburgerMenu from '$lib/components/header/HamburgerMenu.svelte';
+	import { LOGO_NAME } from '$lib/constants/company';
+	import { BACKGROUND_COLOR, FONT_COLOR } from '$lib/constants/colors';
 	import HeaderLink from '$lib/components/header/HeaderLink.svelte';
 
 	import { AppRoute } from '$lib/constants/routes';
-	import DesktopHeader from '$lib/components/header/DesktopHeader.svelte';
 	import { FONT_SIZES } from '$lib/styles/fonts';
 
 	const HEADER_STYLE = `

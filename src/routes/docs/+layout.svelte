@@ -5,7 +5,7 @@
 
 <div class="flex flex-row flex-nowrap">
 	<div class="pr-4">
-		<div class="w-64 overflow-y-auto max-h-screen">
+		<div class="w-64 overflow-y-auto max-h-screen border border-white/0 border-r-white">
 			<Sidebar path={$page.url.pathname} />
 		</div>
 	</div>

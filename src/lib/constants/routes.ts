@@ -1,5 +1,5 @@
 export enum AppRoute {
-	Home = 'https://ammonite.dev/',
+	Home = '/',
 	About = 'https://ammonite.dev/about',
 	Contact = 'https://ammonite.dev/contact',
 	Careers = 'https://ammonite.dev/careers',

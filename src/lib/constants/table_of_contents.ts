@@ -71,8 +71,8 @@ export const SECTION_ITEMS: Record<string, Array<SectionEntry>> = {
 	],
 	template: [
 		{
-			name: 'Usage',
-			url: '/docs/syntax/templates'
+			name: 'Why?',
+			url: '/docs/templates'
 		},
 		{
 			name: 'Built-in Templates',
