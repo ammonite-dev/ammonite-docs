@@ -6,6 +6,9 @@ const config: UserConfig = {
 	plugins: [wasm(), sveltekit()],
 	build: {
 		target: 'esnext'
+	},
+	server: {
+		port: 5174
 	}
 	/*
 	server: {

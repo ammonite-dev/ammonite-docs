@@ -1,7 +1,5 @@
 <script>
 	import { COMPANY_NAME } from '$lib/constants/company';
-	import { ARTICLE_H1_STYLE, ARTICLE_H2_STYLE } from '$lib/styles/article_content';
-	import { CODEBLOCK_STYLE, INLINE_CODE_STYLE } from '$lib/styles/code';
 </script>
 
 <div class="tech_doc">

@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.tech_doc a {
+	@apply text-primary-500;
+}
+
 .tech_doc h1 {
 	@apply pt-2 pb-1 text-4xl font-bold;
 }
@@ -35,6 +39,14 @@
 .tech_doc .inline_code {
 	@apply border-primary-500 border;
 	@apply font-mono bg-primary-700/[.3] mx-1 px-1.5 py-0.5 rounded-lg;
+}
+
+.tech_doc ul {
+	@apply pl-6 my-2 list-disc;
+}
+
+.tech_doc ul li {
+	@apply my-1;
 }
 
 .article_preview {

@@ -1,3 +1,5 @@
+import { AppRoute } from './routes';
+
 export const SECTIONS = [
 	{
 		id: 'introduction',
@@ -12,8 +14,12 @@ export const SECTIONS = [
 		name: 'Syntax'
 	},
 	{
-		id: 'template',
+		id: 'templates',
 		name: 'Templates'
+	},
+	{
+		id: 'built_in_templates',
+		name: 'Built-in Templates'
 	}
 ];
 
@@ -26,33 +32,47 @@ export type SectionEntry = {
 export const SECTION_ITEMS: Record<string, Array<SectionEntry>> = {
 	introduction: [
 		{
-			name: 'What makes a website?',
-			url: '/docs/what_makes_a_website'
+			name: 'Intro',
+			url: AppRoute.Docs
 		},
 		{
 			name: 'Why Markdown?',
-			url: '/docs/why_markdown',
+			url: AppRoute.DocsWhyMarkdown,
 			bookmarks: []
 		},
 		{
 			name: 'Quick Start Guide',
-			url: '/docs/quick_start',
+			url: AppRoute.DocsQuickStart,
 			bookmarks: []
+		}
+	],
+	website_101: [
+		{
+			name: 'Intro',
+			url: AppRoute.DocsWebsite101
+		},
+		{
+			name: 'head',
+			url: AppRoute.DocsWebsite101Head
+		},
+		{
+			name: 'body',
+			url: AppRoute.DocsWebsite101Body
 		}
 	],
 	syntax: [
 		{
 			name: 'Metadata',
-			url: '/docs/syntax/metadata',
+			url: AppRoute.DocsSyntaxMetadata,
 			bookmarks: []
 		},
 		{
 			name: 'Paragraph',
-			url: '/docs/syntax/paragraph'
+			url: AppRoute.DocsSyntaxParagraph
 		},
 		{
 			name: 'Heading',
-			url: '/docs/syntax/heading',
+			url: AppRoute.DocsSyntaxHeading,
 			bookmarks: [
 				{
 					name: 'Heading with anchors',
@@ -62,26 +82,33 @@ export const SECTION_ITEMS: Record<string, Array<SectionEntry>> = {
 		},
 		{
 			name: 'Blockquotes',
-			url: '/docs/syntax/blockquotes'
+			url: AppRoute.DocsSyntaxBlockquotes
 		},
 		{
 			name: 'Templates',
-			url: '/docs/syntax/templates'
+			url: AppRoute.DocsSyntaxTemplates
 		}
 	],
-	template: [
+	templates: [
 		{
-			name: 'Why?',
-			url: '/docs/templates'
-		},
-		{
-			name: 'Built-in Templates',
-			url: '/docs/templates/built_in',
-			bookmarks: []
+			name: 'Intro',
+			url: AppRoute.DocsTemplates
 		},
 		{
 			name: 'Custom Templates',
-			url: '/docs/templates/custom',
+			url: AppRoute.DocsTemplatesCustom,
+			bookmarks: []
+		}
+	],
+	built_in_templates: [
+		{
+			name: 'Intro',
+			url: AppRoute.DocsTemplatesBuiltIn,
+			bookmarks: []
+		},
+		{
+			name: 'ammonite_head',
+			url: AppRoute.DocsTemplatesAmmoniteHead,
 			bookmarks: []
 		}
 	]

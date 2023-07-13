@@ -1,4 +1,0 @@
-<div class="tech_doc">
-	<h1>What Makes A Website?</h1>
-	<p>Work In Progress</p>
-</div>
