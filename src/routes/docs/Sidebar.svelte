@@ -33,7 +33,7 @@
 		<ul class="flex flex-col">
 			{#each section.subsections ?? [] as subsection}
 				{#if subsection.url === $page.url.pathname}
-					<div class={SECTION_ITEM_STYLE_SELECTED}>{subsection.name}</div>
+					<a class={SECTION_ITEM_STYLE_SELECTED} href={subsection.url}>{subsection.name}</a>
 				{:else}
 					<a class={SECTION_ITEM_STYLE_DEFAULT} href={subsection.url}>{subsection.name}</a>
 				{/if}

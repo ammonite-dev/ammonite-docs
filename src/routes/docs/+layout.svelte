@@ -31,7 +31,7 @@
 	<div>
 		<!-- Desktop sidebar -->
 		<div
-			class="sm:block hidden pr-4 w-52 overflow-y-auto max-h-screen border border-white/0 border-r-white"
+			class="sm:block hidden pr-4 w-52 overflow-y-auto max-h-screen"
 		>
 			<Sidebar path={$page.url.pathname} />
 		</div>
