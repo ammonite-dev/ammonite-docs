@@ -40,6 +40,5 @@
 			{/each}
 		</ul>
 	{/each}
-	<div class="h-6" />
-	<div>Debug: {path}</div>
+	<div class="h-12" />
 </div>

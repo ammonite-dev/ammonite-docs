@@ -1,3 +1,24 @@
+<script lang="ts">
+
+	const PARAMETERS = [
+		{
+			name: "title",
+			data_type: "String",
+			description: "Sets the title of the web page",
+		},
+		{
+			name: "description",
+			data_type: "String",
+			description: "Sets the description of the web page for Google Search, Twitter preview, etc.",
+		},
+		{
+			name: "thumbnail_url",
+			data_type: "String",
+			description: "Sets the thumbnail image of the web page for Google Search, Twitter preview, etc.",
+		},
+	];
+</script>
+
 <div class="tech_doc">
 	<h1>
 		<span class="inline_code">ammonite_head</span>
@@ -7,30 +28,24 @@
 		users to modify the contents within the <span class="inline_code">head</span> element.
 	</p>
 	<h2>Parameters</h2>
-	<div class="flex flex-row">
-		<div class="table_column">
-			<div class="table_cell font-bold">Name</div>
-			<div class="table_cell font-mono">title</div>
-			<div class="table_cell font-mono">description</div>
-			<div class="table_cell font-mono">thumbnail_url</div>
-		</div>
-		<div class="table_column">
-			<div class="table_cell font-bold">Type</div>
-			<div class="table_cell font-mono">String</div>
-			<div class="table_cell font-mono">String</div>
-			<div class="table_cell font-mono">String</div>
-		</div>
-		<div class="table_column">
-			<div class="table_cell font-bold">Description</div>
-			<div class="table_cell">Sets the title of the web page</div>
-			<div class="table_cell">
-				Sets the description of the web page for Google Search, Twitter preview, etc.
-			</div>
-			<div class="table_cell">
-				Sets the thumbnail image of the web page for Google Search, Twitter preview, etc.
-			</div>
-		</div>
-	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each PARAMETERS as param}
+			<tr>
+				<td class="table_cell font-mono">{param.name}</td>
+				<td class="table_cell font-mono">{param.data_type}</td>
+				<td class="table_cell">{param.description}</td>
+			</tr>
+			{/each}
+		</tbody>
+	</table>
 	<h2>Example</h2>
 	<pre><code
 			>{`\`\`\`ammonite_head
@@ -45,10 +60,13 @@
 </div>
 
 <style>
-	.table_column:nth-child(even) {
-		background-color: #777777;
+	table {
+		border-color: #aaaaaa;
 	}
+
 	.table_cell {
+		min-width: 0;
 		padding: 0.5rem 1rem;
+		border-width: 1px;
 	}
 </style>
