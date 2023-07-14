@@ -8,10 +8,6 @@ export type SubsectionData = {
 
 export const INTRODUCTION_SECTION: Array<SubsectionData> = [
 	{
-		name: 'Intro',
-		url: AppRoute.Docs
-	},
-	{
 		name: 'Why Markdown?',
 		url: AppRoute.DocsWhyMarkdown,
 		bookmarks: []
@@ -24,10 +20,6 @@ export const INTRODUCTION_SECTION: Array<SubsectionData> = [
 ];
 
 export const WEBSITE101_SECTION: Array<SubsectionData> = [
-	{
-		name: 'Intro',
-		url: AppRoute.DocsWebsite101
-	},
 	{
 		name: 'head',
 		url: AppRoute.DocsWebsite101Head
@@ -86,10 +78,6 @@ export const SYNTAX_SECTION: Array<SubsectionData> = [
 
 export const TEMPLATES_SECTION: Array<SubsectionData> = [
 	{
-		name: 'Intro',
-		url: AppRoute.DocsTemplates
-	},
-	{
 		name: 'Syntax',
 		url: AppRoute.DocsTemplatesSyntax
 	},
@@ -101,11 +89,6 @@ export const TEMPLATES_SECTION: Array<SubsectionData> = [
 ];
 
 export const BUILTIN_TEMPLATES_SECTION: Array<SubsectionData> = [
-	{
-		name: 'Intro',
-		url: AppRoute.DocsTemplatesBuiltIn,
-		bookmarks: []
-	},
 	{
 		name: 'ammonite_head',
 		url: AppRoute.DocsTemplatesAmmoniteHead,

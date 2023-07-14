@@ -1,3 +1,7 @@
+<script>
+	import { SYNTAX_SECTION } from '$lib/constants/sections';
+</script>
+
 <div class="tech_doc">
 	<h1>Syntax</h1>
 	<p>
@@ -5,4 +9,9 @@
 		of the syntax is Markdown, so you may skip most of this if you are already proficient with
 		Markdown.
 	</p>
+	<ul>
+		{#each SYNTAX_SECTION as section}
+			<li><a href={section.url}>{section.name}</a></li>
+		{/each}
+	</ul>
 </div>

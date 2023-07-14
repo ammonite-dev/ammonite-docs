@@ -30,9 +30,7 @@
 <div class="flex sm:flex-row flex-col flex-nowrap">
 	<div>
 		<!-- Desktop sidebar -->
-		<div
-			class="sm:block hidden pr-4 w-52 overflow-y-auto max-h-screen"
-		>
+		<div class="sm:block hidden pr-4 w-52 overflow-y-auto max-h-screen">
 			<Sidebar path={$page.url.pathname} />
 		</div>
 		<!-- Mobile hamburger -->
@@ -42,5 +40,6 @@
 	</div>
 	<div class="min-w-0 px-4">
 		<slot />
+		<div class="h-12" />
 	</div>
 </div>

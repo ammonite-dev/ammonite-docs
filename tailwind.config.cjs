@@ -62,7 +62,7 @@ const config = {
 		extend: {
 			colors: {
 				errorDark: '#f8183e',
-				errorLight: '#fca3b2',
+				errorLight: '#e695a3',
 				successDark: '#07D95A',
 				successLight: '#9CF0BD',
 				primary: BRAND_PRIMARY,

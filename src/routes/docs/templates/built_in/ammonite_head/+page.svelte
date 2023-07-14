@@ -1,21 +1,21 @@
 <script lang="ts">
-
 	const PARAMETERS = [
 		{
-			name: "title",
-			data_type: "String",
-			description: "Sets the title of the web page",
+			name: 'title',
+			data_type: 'String',
+			description: 'Sets the title of the web page'
 		},
 		{
-			name: "description",
-			data_type: "String",
-			description: "Sets the description of the web page for Google Search, Twitter preview, etc.",
+			name: 'description',
+			data_type: 'String',
+			description: 'Sets the description of the web page for Google Search, Twitter preview, etc.'
 		},
 		{
-			name: "thumbnail_url",
-			data_type: "String",
-			description: "Sets the thumbnail image of the web page for Google Search, Twitter preview, etc.",
-		},
+			name: 'thumbnail_url',
+			data_type: 'String',
+			description:
+				'Sets the thumbnail image of the web page for Google Search, Twitter preview, etc.'
+		}
 	];
 </script>
 
@@ -38,11 +38,11 @@
 		</thead>
 		<tbody>
 			{#each PARAMETERS as param}
-			<tr>
-				<td class="table_cell font-mono">{param.name}</td>
-				<td class="table_cell font-mono">{param.data_type}</td>
-				<td class="table_cell">{param.description}</td>
-			</tr>
+				<tr>
+					<td class="table_cell font-mono">{param.name}</td>
+					<td class="table_cell font-mono">{param.data_type}</td>
+					<td class="table_cell">{param.description}</td>
+				</tr>
 			{/each}
 		</tbody>
 	</table>

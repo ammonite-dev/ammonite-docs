@@ -17,6 +17,11 @@
         pt-4 pb-2
     `;
 
+	const SECTION_LINK_STYLE = `
+		duration-300
+		${FONT_COLOR_HOVER['accentPrimary']}
+    `;
+
 	const SECTION_ITEM_STYLE_SHARED = `
 		pl-1 pb-0.5
         duration-300
@@ -69,19 +74,28 @@
 		</div>
 		<div class="px-6">
 			{#each SECTIONS as section}
-				<div class={SECTION_STYLE}>{section.name}</div>
-				<ul class="flex flex-col">
+				{#if section.url}
+					<div class={SECTION_STYLE}>
+						<a class={SECTION_LINK_STYLE} href={section.url}>{section.name}</a>
+					</div>
+				{:else}
+					<div class={SECTION_STYLE}>{section.name}</div>
+				{/if}
+				<div class="flex flex-col">
 					{#each section.subsections ?? [] as subsection}
 						{#if subsection.url === $page.url.pathname}
-							<a class={SECTION_ITEM_STYLE_SELECTED} href={subsection.url}>{subsection.name}</a>
+							<a id="#{section.name}" class={SECTION_ITEM_STYLE_SELECTED} href={subsection.url}
+								>{subsection.name}</a
+							>
 						{:else}
-							<a class={SECTION_ITEM_STYLE_DEFAULT} href={subsection.url}>{subsection.name}</a>
+							<a id="#{section.name}" class={SECTION_ITEM_STYLE_DEFAULT} href={subsection.url}
+								>{subsection.name}</a
+							>
 						{/if}
 					{/each}
-				</ul>
+				</div>
 			{/each}
 		</div>
-		<div class="h-6" />
-		<div>Debug: {path}</div>
+		<div class="h-12" />
 	</div>
 </div>
