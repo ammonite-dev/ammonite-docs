@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { FOOTER_ITEMS } from '$lib/constants/footer';
 	import { BACKGROUND_COLOR, FONT_COLOR, FONT_COLOR_HOVER } from '$lib/constants/colors';
+	import ToggleTheme from '$lib/components/ToggleTheme.svelte';
 
 	const footer = `
 		${BACKGROUND_COLOR['primary']}
@@ -46,6 +47,7 @@
 		</div>
 		<div class="h-8 w-8" />
 		<div class={`flex flex-col justify-end ${FONT_COLOR['tertiary']}`}>
+			<ToggleTheme />
 			<p>2023</p>
 		</div>
 	</div>

@@ -22,7 +22,7 @@ export const BACKGROUND_COLOR_HOVER: Record<BackgroundColor, string> = {
 
 export const FONT_COLOR: Record<FontColor, string> = {
 	none: '',
-	primary: 'light-text-primary dark:text-dark-text-primary',
+	primary: 'text-light-text-primary dark:text-dark-text-primary',
 	secondary: 'text-light-text-secondary dark:text-dark-text-secondary',
 	tertiary: 'text-light-text-tertiary dark:text-dark-text-tertiary',
 	accentPrimary: 'text-light-primary dark:text-dark-primary',

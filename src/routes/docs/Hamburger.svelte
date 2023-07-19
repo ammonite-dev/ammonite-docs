@@ -38,7 +38,6 @@
     `;
 
 	export let path: string;
-
 	export let open: boolean;
 
 	const toggleMenu = () => {

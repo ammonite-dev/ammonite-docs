@@ -27,7 +27,7 @@ export const SECTIONS: Array<SectionData> = [
 	{
 		section: Section.Introduction,
 		name: 'Introduction',
-		url: AppRoute.Docs,
+		url: AppRoute.DocsHome,
 		subsections: INTRODUCTION_SECTION
 	},
 	{

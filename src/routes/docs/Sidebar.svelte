@@ -2,7 +2,6 @@
 	import { FONT_SIZES, FONT_WEIGHT } from '$lib/styles/fonts';
 	import { SECTIONS } from '$lib/constants/table_of_contents';
 	import { FONT_COLOR, FONT_COLOR_HOVER } from '$lib/constants/colors';
-	import { page } from '$app/stores';
 
 	const SECTION_STYLE = `
         ${FONT_SIZES['lg']} ${FONT_WEIGHT['bold']}
@@ -25,7 +24,7 @@
 
 	const SECTION_ITEM_STYLE_DEFAULT = `
         ${SECTION_ITEM_STYLE_SHARED}
-        text-gray-300
+        ${FONT_COLOR['tertiary']}
         ${FONT_COLOR_HOVER['accentPrimary']}
     `;
 	const SECTION_ITEM_STYLE_SELECTED = `
@@ -40,7 +39,7 @@
 	{#each SECTIONS as section}
 		{#if section.url}
 			<div class={SECTION_STYLE}>
-				{#if section.url === $page.url.pathname}
+				{#if section.url === path}
 					<a class={SECTION_LINK_STYLE_SELECTED} href={section.url}>{section.name}</a>
 				{:else}
 					<a class={SECTION_LINK_STYLE} href={section.url}>{section.name}</a>
@@ -51,7 +50,7 @@
 		{/if}
 		<div class="flex flex-col">
 			{#each section.subsections ?? [] as subsection}
-				{#if subsection.url === $page.url.pathname}
+				{#if subsection.url === path}
 					<a id="#{section.name}" class={SECTION_ITEM_STYLE_SELECTED} href={subsection.url}
 						>{subsection.name}</a
 					>

@@ -7,7 +7,7 @@ export enum AppRoute {
 	TermsOfService = 'https://ammonite.dev/docs/terms_of_service',
 	PrivacyPolicy = 'https://ammonite.dev/docs/privacy_policy',
 
-	Docs = '/docs',
+	DocsHome = '/docs',
 
 	DocsWhyMarkdown = '/docs/why_markdown',
 	DocsQuickStart = '/docs/quick_start',

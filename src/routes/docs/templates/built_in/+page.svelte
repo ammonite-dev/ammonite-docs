@@ -5,7 +5,7 @@
 		think will be useful for a wide variety of web pages.
 	</p>
 	<h5>
-		If you would like additions to the built-in collection, feel free to reach out to us <a href="#"
+		If you would like additions to the built-in collection, feel free to reach out to us <a href="/"
 			>here</a
 		> (Not yet working!)
 	</h5>

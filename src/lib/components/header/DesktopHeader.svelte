@@ -2,7 +2,6 @@
 	import { navigating, page } from '$app/stores';
 
 	import { DropdownMenu, headerMenuState } from '$lib/api/local/header_state';
-	import { GOOGLE_FORM, LOGO_NAME } from '$lib/constants/company';
 	import { BACKGROUND_COLOR_HOVER, FONT_COLOR } from '$lib/constants/colors';
 	import ProfileButton from '$lib/components/header/ProfileButton.svelte';
 	import ToggleTheme from '$lib/components/ToggleTheme.svelte';
@@ -39,8 +38,6 @@
 	{#if jwt_decoded === null}
 		<ToggleTheme />
 		<div class="w-6" />
-		<a class={CTA_BUTTON_STYLE} target="_blank" rel="noreferrer" href={GOOGLE_FORM}>Join Waitlist</a
-		>
 		<!--
 			<ToggleTheme />
 			<div class="w-6" />
@@ -52,9 +49,6 @@
 	{#if jwt_decoded}
 		<ProfileButton>
 			<div class="flex flex-col items-start">
-				<a class={PROFILE_MENU_ITEM_STYLE} href={AppRoute.UserDashboard}>Dashboard</a>
-				<div class="h-2" />
-				<a class={PROFILE_MENU_ITEM_STYLE} href={AppRoute.UserPreferences}> Preferences </a>
 				<div class="h-2" />
 				<div class="ml-4"><ToggleTheme /></div>
 				<div class="h-2" />

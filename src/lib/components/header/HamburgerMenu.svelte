@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { CTA_BUTTON_STYLE, OUTLINE_BUTTON_STYLE } from '$lib/styles/button';
-
 	import {
 		HAMBURGER_BUTTON_1,
 		HAMBURGER_BUTTON_1_OPEN,
@@ -10,7 +8,6 @@
 		HAMBURGER_MENU_OPENED
 	} from '$lib/styles/hamburger';
 	import ToggleTheme from '$lib/components/ToggleTheme.svelte';
-	import { GOOGLE_FORM } from '$lib/constants/company';
 	import { FONT_COLOR, FONT_COLOR_HOVER } from '$lib/constants/colors';
 
 	export let open: boolean;
@@ -53,9 +50,6 @@
 				<div class="h-4" />
 				<a class={CTA_BUTTON_STYLE} href={AppRoute.UserSignUp}> Sign Up </a>
 				-->
-				<a class={CTA_BUTTON_STYLE} target="_blank" rel="noreferrer" href={GOOGLE_FORM}
-					>Join Waitlist</a
-				>
 				<div class="h-8" />
 				<ToggleTheme />
 			</div>
