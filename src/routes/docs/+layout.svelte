@@ -31,8 +31,8 @@
 			<Sidebar path={$page.url.pathname} />
 		</div>
 		<!-- Mobile hamburger -->
-		<div class="sm:hidden block sm:p-0 px-4">
-			<Hamburger path={$page.url.pathname} open={false} />
+		<div class="sm:hidden block sm:p-0 px-4 mt-2">
+			<Hamburger />
 		</div>
 	</div>
 	<div class="min-w-0 px-4">

@@ -11,6 +11,7 @@
 		HAMBURGER_MENU_OPENED
 	} from '$lib/styles/hamburger';
 	import { page } from '$app/stores';
+	import { drawerStore } from '@skeletonlabs/skeleton';
 
 	const SECTION_STYLE = `
         ${FONT_SIZES['lg']} ${FONT_WEIGHT['bold']}
@@ -37,11 +38,12 @@
         ${FONT_COLOR['accentPrimary']}
     `;
 
-	export let path: string;
-	export let open: boolean;
-
 	const toggleMenu = () => {
-		open = !open;
+		if (!$drawerStore.open) {
+			drawerStore.open();
+		} else {
+			drawerStore.close();
+		}
 	};
 </script>
 
@@ -61,40 +63,4 @@
 			<div class={HAMBURGER_BUTTON_1} />
 		</div>
 	</button>
-	<div class={open ? HAMBURGER_MENU_OPENED : HAMBURGER_MENU_CLOSED}>
-		<div class="flex justify-end w-full pt-2 px-6">
-			<div class="{FONT_COLOR['primary']} {FONT_COLOR_HOVER['accentPrimary']}">
-				<button on:click={toggleMenu}>
-					<div class={HAMBURGER_BUTTON_1_OPEN} />
-					<div class={HAMBURGER_BUTTON_2_OPEN} />
-					<div class={HAMBURGER_BUTTON_3_OPEN} />
-				</button>
-			</div>
-		</div>
-		<div class="px-6">
-			{#each SECTIONS as section}
-				{#if section.url}
-					<div class={SECTION_STYLE}>
-						<a class={SECTION_LINK_STYLE} href={section.url}>{section.name}</a>
-					</div>
-				{:else}
-					<div class={SECTION_STYLE}>{section.name}</div>
-				{/if}
-				<div class="flex flex-col">
-					{#each section.subsections ?? [] as subsection}
-						{#if subsection.url === $page.url.pathname}
-							<a id="#{section.name}" class={SECTION_ITEM_STYLE_SELECTED} href={subsection.url}
-								>{subsection.name}</a
-							>
-						{:else}
-							<a id="#{section.name}" class={SECTION_ITEM_STYLE_DEFAULT} href={subsection.url}
-								>{subsection.name}</a
-							>
-						{/if}
-					{/each}
-				</div>
-			{/each}
-		</div>
-		<div class="h-12" />
-	</div>
 </div>

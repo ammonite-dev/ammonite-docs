@@ -23,6 +23,6 @@
 			<HeaderLink url={AppRoute.Home} label={LOGO_NAME} />
 		</div>
 		<div class="sm:block hidden" />
-		<div class="sm:hidden block flex flex-row" />
+		<div class="sm:hidden flex flex-row" />
 	</nav>
 </header>

@@ -33,33 +33,36 @@ const BRAND_SECONDARY = {
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-	content: ['./src/**/*.{html,js,svelte,ts,rs,liquid}'],
 	darkMode: 'class',
+	content: [
+		'./src/**/*.{html,js,svelte,ts,rs,liquid}',
+		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
+	],
 	theme: {
-		boxShadow: {
-			md: '0 0 12px -4px #808080',
-			'md-dark': '0 0 12px -4px #808080'
-		},
-		fontSize: {
-			sm: '0.875rem',
-			base: '1rem',
-			lg: '1.125rem',
-			xl: '1.25rem',
-			['2xl']: '1.5rem',
-			['3xl']: '1.875rem',
-			['4xl']: '2.25rem',
-			['5xl']: '3rem',
-			label: '0.875rem',
-			title: '1.25rem',
-			normal: '14px'
-		},
-		fontFamily: {
-			sans: ['Roboto', 'sans'],
-			serif: ['Roboto', 'sans-serif'],
-			mono: ['Fira Code', 'monospace'],
-			logo: ['Poppins', 'sans']
-		},
 		extend: {
+			boxShadow: {
+				md: '0 0 12px -4px #808080',
+				'md-dark': '0 0 12px -4px #808080'
+			},
+			fontSize: {
+				sm: '0.875rem',
+				base: '1rem',
+				lg: '1.125rem',
+				xl: '1.25rem',
+				['2xl']: '1.5rem',
+				['3xl']: '1.875rem',
+				['4xl']: '2.25rem',
+				['5xl']: '3rem',
+				label: '0.875rem',
+				title: '1.25rem',
+				normal: '14px'
+			},
+			fontFamily: {
+				sans: ['Roboto', 'sans'],
+				serif: ['Roboto', 'sans-serif'],
+				mono: ['Fira Code', 'monospace'],
+				logo: ['Poppins', 'sans']
+			},
 			colors: {
 				errorDark: '#f8183e',
 				errorLight: '#e695a3',
@@ -122,7 +125,10 @@ const config = {
 			}
 		}
 	},
-	plugins: []
+	plugins: [
+		// 3. Append the Skeleton plugin to the end of this list
+		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
+	]
 };
 
 module.exports = config;
