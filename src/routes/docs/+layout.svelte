@@ -14,15 +14,15 @@
 	twitter={{
 		title: pageTitle,
 		description: pageDescription,
-		cardType: 'summary_large_image',
+		cardType: 'summary_large_image'
 	}}
 	openGraph={{
-		site_name: "Ammonite",
-		type: "website",
+		site_name: 'Ammonite',
+		type: 'website',
 		title: pageTitle,
-		description: pageDescription,
+		description: pageDescription
 	}}
-	/>
+/>
 
 <div class="flex sm:flex-row flex-col flex-nowrap">
 	<div>
