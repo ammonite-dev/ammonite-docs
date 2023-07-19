@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { code_to_html } from '$lib/api/local/syntax';
-	import { CodeBlock } from '@skeletonlabs/skeleton';
 </script>
 
 <div class="tech_doc">

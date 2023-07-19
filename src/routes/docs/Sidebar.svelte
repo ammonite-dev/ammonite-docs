@@ -39,7 +39,7 @@
 	{#each SECTIONS as section}
 		{#if section.url}
 			<div class={SECTION_STYLE}>
-				{#if section.url === path}
+				{#if section.url === path.slice(0, -1)}
 					<a class={SECTION_LINK_STYLE_SELECTED} href={section.url}>{section.name}</a>
 				{:else}
 					<a class={SECTION_LINK_STYLE} href={section.url}>{section.name}</a>
@@ -50,7 +50,7 @@
 		{/if}
 		<div class="flex flex-col">
 			{#each section.subsections ?? [] as subsection}
-				{#if subsection.url === path}
+				{#if subsection.url === path.slice(0, -1)}
 					<a id="#{section.name}" class={SECTION_ITEM_STYLE_SELECTED} href={subsection.url}
 						>{subsection.name}</a
 					>
