@@ -9,6 +9,7 @@
 	import Navbar from './Header.svelte';
 	import Footer from './Footer.svelte';
 	import { Diamonds } from 'svelte-loading-spinners';
+	import { afterNavigate } from '$app/navigation';
 
 	$: dark = $darkTheme;
 

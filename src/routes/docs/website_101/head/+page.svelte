@@ -1,4 +1,5 @@
 <script>
+	import { code_to_html } from '$lib/api/local/syntax';
 	import { COMPANY_NAME } from '$lib/constants/company';
 	import { AppRoute } from '$lib/constants/routes';
 </script>
@@ -24,7 +25,9 @@
 	</p>
 	<h4>Example HTML</h4>
 	<pre><code
-			>{`<html>
+			>{@html code_to_html(
+				'html',
+				`<html>
 	<head>
 		<title>My Webpage Title</title>
 
@@ -47,6 +50,7 @@
 	<body>
 		<!-- content -->
 	</body>
-</html>`}</code
+</html>`
+			)}</code
 		></pre>
 </div>

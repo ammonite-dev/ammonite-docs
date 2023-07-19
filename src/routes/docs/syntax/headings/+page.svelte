@@ -1,3 +1,7 @@
+<script>
+	import { code_to_html } from '$lib/api/local/syntax';
+</script>
+
 <div class="tech_doc">
 	<h1>Headings</h1>
 	<p>
@@ -6,12 +10,15 @@
 	</p>
 	<h4>Example Input</h4>
 	<pre><code
-			>{`# Heading 1
+			>{@html code_to_html(
+				'md',
+				`# Heading 1
 ## Heading 2
 ### Heading 3
 #### Heading 4
 ##### Heading 5
-###### Heading 6`}</code
+###### Heading 6`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">

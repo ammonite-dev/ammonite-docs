@@ -1,4 +1,5 @@
 <script>
+	import { code_to_html } from '$lib/api/local/syntax';
 	import { COMPANY_NAME } from '$lib/constants/company';
 	import { AppRoute } from '$lib/constants/routes';
 </script>
@@ -27,14 +28,17 @@
 		of our page.
 	</p>
 	<pre><code
-			>{`\`\`\`ammonite_head
+			>{@html code_to_html(
+				'json',
+				`\`\`\`ammonite_head
 {
     "version": 1,
     "data": {
 		"title": "My first page with a title",
 	}
 }
-\`\`\``}</code
+\`\`\``
+			)}</code
 		></pre>
 	<p>To learn more, checkout <a href={AppRoute.DocsTemplatesAmmoniteHead}>ammonite_head</a></p>
 </div>

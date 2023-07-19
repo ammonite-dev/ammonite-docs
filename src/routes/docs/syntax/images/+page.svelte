@@ -1,4 +1,5 @@
 <script>
+	import { code_to_html } from '$lib/api/local/syntax';
 	import { AppRoute } from '$lib/constants/routes';
 </script>
 
@@ -8,7 +9,9 @@
 
 	<h4>Example Input</h4>
 	<pre><code
-			>{`![Tux, the Linux mascot](https://mdg.imgix.net/assets/images/tux.png?auto=format&fit=clip&q=40&w=100)
+			>{@html code_to_html(
+				'md',
+				`![Tux, the Linux mascot](https://mdg.imgix.net/assets/images/tux.png?auto=format&fit=clip&q=40&w=100)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Duis ac consequat turpis. Nullam viverra, neque at cursus
@@ -20,7 +23,8 @@ semper turpis felis, et dictum nulla euismod sit amet.
 In placerat nulla sed elit consequat fermentum. Proin
 vestibulum justo nec metus finibus hendrerit. Duis at
 suscipit nunc. Donec molestie ultricies luctus. Nullam vel
-imperdiet massa, sed facilisis erat.`}</code
+imperdiet massa, sed facilisis erat.`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
@@ -57,7 +61,9 @@ imperdiet massa, sed facilisis erat.`}</code
 	<h3>Float Images To The Right</h3>
 	<h4>Example Input</h4>
 	<pre><code
-			>{`<img alt="tux" style="float: right;" src="https://mdg.imgix.net/assets/images/tux.png">
+			>{@html code_to_html(
+				'md',
+				`<img alt="tux" style="float: right;" src="https://mdg.imgix.net/assets/images/tux.png">
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Duis ac consequat turpis. Nullam viverra, neque at cursus
@@ -69,7 +75,8 @@ semper turpis felis, et dictum nulla euismod sit amet.
 In placerat nulla sed elit consequat fermentum. Proin
 vestibulum justo nec metus finibus hendrerit. Duis at
 suscipit nunc. Donec molestie ultricies luctus. Nullam vel
-imperdiet massa, sed facilisis erat.`}</code
+imperdiet massa, sed facilisis erat.`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
@@ -87,7 +94,12 @@ imperdiet massa, sed facilisis erat.`}</code
 
 	<h3>Set Image Size</h3>
 	<h4>Example Input</h4>
-	<pre><code>{`<img alt="tux" style="width: 50%; height: 240px" src="image.jpg">`}</code></pre>
+	<pre><code
+			>{@html code_to_html(
+				'html',
+				`<img alt="tux" style="width: 50%; height: 240px" src="image.jpg">`
+			)}</code
+		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
 		<img

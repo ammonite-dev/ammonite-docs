@@ -1,3 +1,7 @@
+<script>
+	import { code_to_html } from '$lib/api/local/syntax';
+</script>
+
 <div class="tech_doc">
 	<h1>
 		<span class="inline_code">ammonite_head</span>
@@ -35,14 +39,17 @@
 	</div>
 	<h2>Example</h2>
 	<pre><code
-			>{`\`\`\`ammonite_head
+			>{@html code_to_html(
+				'json',
+				`\`\`\`ammonite_head
 	"version": 1,
 	"data": {
 		"title": "My web page title",
 		"description": "This is my web page",
 		"thumbnail_url": "https://ammonite.dev/assets/abc.png"
 	}
-}`}</code
+}`
+			)}</code
 		></pre>
 </div>
 

@@ -1,3 +1,7 @@
+<script>
+	import { code_to_html } from '$lib/api/local/syntax';
+</script>
+
 <div class="tech_doc">
 	<h1>Lists</h1>
 	<p>We can organize data into ordered or unordered lists</p>
@@ -6,9 +10,12 @@
 
 	<h4>Example Input</h4>
 	<pre><code
-			>{`- Milk
+			>{@html code_to_html(
+				'md',
+				`- Milk
 - Cheese
-  - Blue variety`}</code
+  - Blue variety`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
@@ -26,10 +33,13 @@
 	<h2>Ordered List</h2>
 	<h4>Example Input</h4>
 	<pre><code
-			>{`1. Eggs
+			>{@html code_to_html(
+				'md',
+				`1. Eggs
   1. Is it green?
   2. Sam I am.
-2. Ham`}</code
+2. Ham`
+			)}</code
 		></pre>
 
 	<h4>Example Output</h4>
@@ -49,10 +59,13 @@
 	<h2>Mixing Lists</h2>
 	<h4>Example Input</h4>
 	<pre><code
-			>{`1. Eggs
+			>{@html code_to_html(
+				'md',
+				`1. Eggs
   - Is it green?
   - Sam I am.
-2. Ham`}</code
+2. Ham`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">

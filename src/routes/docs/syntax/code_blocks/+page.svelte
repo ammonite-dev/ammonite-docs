@@ -1,3 +1,7 @@
+<script>
+	import { code_to_html } from '$lib/api/local/syntax';
+</script>
+
 <div class="tech_doc">
 	<h1>Codeblocks</h1>
 	<p>
@@ -8,7 +12,11 @@
 	<h2>Inline Code</h2>
 
 	<h4>Example Input</h4>
-	<pre><code>{`By calling the function \`myFunction(a, b, c);\`, we can get our answer.`}</code
+	<pre><code
+			>{@html code_to_html(
+				'markdown',
+				`By calling the function \`myFunction(a, b, c);\`, we can get our answer.`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
@@ -22,7 +30,9 @@
 	<h2>Code Block</h2>
 	<h4>Example Input</h4>
 	<pre><code
-			>{`In order to use Ammonite's templates, you must specify
+			>{@html code_to_html(
+				'markdown',
+				`In order to use Ammonite's templates, you must specify
 a code block that is prefixed with \`ammonite_template\`.
 
 \`\`\`ammonite_template
@@ -31,7 +41,8 @@ a code block that is prefixed with \`ammonite_template\`.
 	"template": "/ammonite/header_with_anchor",
 	"data": {}
 }
-\`\`\``}</code
+\`\`\``
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
@@ -41,12 +52,15 @@ a code block that is prefixed with \`ammonite_template\`.
 			>.
 		</p>
 		<pre><code
-				>{`ammonite_template
+				>{@html code_to_html(
+					'json',
+					`ammonite_template
 {
 	"version": 1,
 	"template": "/ammonite/header_with_anchor",
 	"data": {}
-}`}</code
+}`
+				)}</code
 			></pre>
 	</div>
 	<p>
@@ -122,12 +136,16 @@ a code block that is prefixed with \`ammonite_template\`.
 	</table>
 	<h4>Example Input</h4>
 	<pre><code
-			>{`\`\`\`
+			>{@html code_to_html(
+				'ts',
+				`\`\`\`
 const myVariable = \\\`$\{myOtherVariable\}\\\\n\\\`;
-\`\`\``}</code
+\`\`\``
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
-		<pre><code>{`const myVariable = \`$\{myOtherVariable\}\\n\`;`}</code></pre>
+		<pre><code>{@html code_to_html('ts', `const myVariable = \`$\{myOtherVariable\}\\n\`;`)}</code
+			></pre>
 	</div>
 </div>

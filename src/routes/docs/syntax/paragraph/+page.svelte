@@ -1,3 +1,7 @@
+<script>
+	import { code_to_html } from '$lib/api/local/syntax';
+</script>
+
 <div class="tech_doc">
 	<h1>Paragraph</h1>
 	<p>
@@ -7,9 +11,12 @@
 
 	<h4>Example Input</h4>
 	<pre><code
-			>{`Hey, this is a paragraph
+			>{@html code_to_html(
+				'md',
+				`Hey, this is a paragraph
 
-Hey, here is another paragraph`}</code
+Hey, here is another paragraph`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
@@ -19,11 +26,14 @@ Hey, here is another paragraph`}</code
 
 	<h4>Example Input</h4>
 	<pre><code
-			>{`We can also create
+			>{@html code_to_html(
+				'md',
+				`We can also create
 **bold text**
 *italic text*
 __underline text__
-~~strikethrough text~~`}</code
+~~strikethrough text~~`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">

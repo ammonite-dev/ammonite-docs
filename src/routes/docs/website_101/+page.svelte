@@ -1,3 +1,8 @@
+<script lang="ts">
+	import { code_to_html } from '$lib/api/local/syntax';
+	import { CodeBlock } from '@skeletonlabs/skeleton';
+</script>
+
 <div class="tech_doc">
 	<h1>Website 101</h1>
 	<p>
@@ -8,13 +13,16 @@
 		element and <span class="inline_code">&lt;body&gt;</span> element inside it.
 	</p>
 	<pre><code
-			>{`<html>
-		<head>
-			<!-- content -->
-		</head>
-		<body>
-			<!-- content -->
-		</body>
-</html>`}</code
+			>{@html code_to_html(
+				'html',
+				`<html>
+	<head>
+		<!-- content -->
+	</head>
+	<body>
+		<!-- content -->
+	</body>
+</html>`
+			)}</code
 		></pre>
 </div>

@@ -1,3 +1,7 @@
+<script>
+	import { code_to_html } from '$lib/api/local/syntax';
+</script>
+
 <div class="tech_doc">
 	<h1>Raw HTML</h1>
 	<p>
@@ -6,8 +10,11 @@
 	</p>
 	<h4>Example Input</h4>
 	<pre><code
-			>{`<h1 id="header-id1">This header has an id</h1>
-<a href="#header-id1">Click here to go to header</a>`}</code
+			>{@html code_to_html(
+				'html',
+				`<h1 id="header-id1">This header has an id</h1>
+<a href="#header-id1">Click here to go to header</a>`
+			)}</code
 		></pre>
 	<h4>Example Output</h4>
 	<div class="article_preview">
