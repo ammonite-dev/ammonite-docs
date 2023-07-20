@@ -20,6 +20,16 @@ export const BACKGROUND_COLOR_HOVER: Record<BackgroundColor, string> = {
 	accentTertiary: 'hover:bg-light-tertiary dark:hover:bg-dark-tertiary'
 };
 
+export const BACKGROUND_COLOR_REVERSE: Record<BackgroundColor, string> = {
+	none: '',
+	primary: 'dark:bg-light-bg-primary bg-dark-bg-primary',
+	secondary: 'dark:bg-light-bg-secondary bg-dark-bg-secondary',
+	tertiary: 'dark:bg-light-bg-tertiary bg-dark-bg-tertiary',
+	accentPrimary: 'dark:bg-light-primary bg-dark-primary',
+	accentSecondary: 'dark:bg-light-secondary bg-dark-secondary',
+	accentTertiary: 'dark:bg-light-tertiary bg-dark-tertiary'
+};
+
 export const FONT_COLOR: Record<FontColor, string> = {
 	none: '',
 	primary: 'text-light-text-primary dark:text-dark-text-primary',

@@ -1,23 +1,17 @@
 <script>
+	import ErrorAlert from '$lib/components/ErrorAlert.svelte';
 	import { COMPANY_NAME } from '$lib/constants/company';
 	import { AppRoute } from '$lib/constants/routes';
 </script>
 
 <div class="tech_doc">
-	<div
-		class="
-		text-black
-		bg-errorLight
-		border-errorDark
-		border rounded
-		p-4 my-2"
-	>
+	<ErrorAlert>
 		<div class="font-bold text-xl">Beta Warning</div>
 		<div>
 			Everything is currently still in development. Many things may change as features are rolled
 			out or axed.
 		</div>
-	</div>
+	</ErrorAlert>
 	<h1>Introduction</h1>
 	<p>
 		Welcome to the Technical Documentation of {COMPANY_NAME}!

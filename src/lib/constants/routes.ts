@@ -32,7 +32,8 @@ export enum AppRoute {
 	DocsTemplatesCustom = '/docs/templates/custom',
 	DocsTemplatesBuiltIn = '/docs/templates/built_in',
 
-	DocsTemplatesAmmoniteHead = '/docs/templates/built_in/ammonite_head'
+	DocsTemplatesAmmoniteHead = '/docs/templates/built_in/ammonite_head',
+	DocsTemplatesAnchoredHeading = '/docs/templates/built_in/anchored_heading'
 }
 
 export function createAppRoute(route: AppRoute, params: Record<string, string>): string {

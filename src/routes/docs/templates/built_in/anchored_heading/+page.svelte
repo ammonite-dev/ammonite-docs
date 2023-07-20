@@ -1,6 +1,5 @@
-<script lang="ts">
+<script>
 	import { code_to_html } from '$lib/api/local/syntax';
-	import ResponsiveTable from '$lib/components/table/ResponsiveTable.svelte';
 	import { TABLE_CELL_STYLE } from '$lib/styles/table';
 
 	const TABLE_HEADERS = ['Name', 'Type', 'Description'];
@@ -32,39 +31,33 @@
 
 <div class="tech_doc">
 	<h1>
-		<span class="inline_code">ammonite_head</span>
+		<span class="inline_code">anchored_heading</span>
 	</h1>
 	<p>
 		This template is special among other built-in templates. It is the only template that allows
 		users to modify the contents within the <span class="inline_code">head</span> element.
 	</p>
 	<h2>Parameters</h2>
-	<ResponsiveTable tableHeaders={TABLE_HEADERS} tableRows={TABLE_ROWS} />
 	<h2>Example</h2>
 	<pre><code
 			>{@html code_to_html(
 				'json',
-				`\`\`\`ammonite_head
-	"version": 1,
-	"data": {
-		"title": "My web page title",
-		"description": "This is my web page",
-		"thumbnail_url": "https://ammonite.dev/assets/abc.png"
-	}
-}
+				`\`\`\`
 \`\`\``
 			)}</code
 		></pre>
 </div>
 
 <style>
-	table {
-		border-color: #aaaaaa;
+	.table_column:nth-child(even) {
+		background-color: #777777;
 	}
-
-	.py-2 px-4 {
-		min-width: 0;
+	.table_cell {
 		padding: 0.5rem 1rem;
-		border-width: 1px;
+	}
+	.table_header {
+		padding: 0.5rem 1rem;
+		background-color: #555555;
+		font-weight: bold;
 	}
 </style>

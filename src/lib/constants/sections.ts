@@ -93,5 +93,10 @@ export const BUILTIN_TEMPLATES_SECTION: Array<SubsectionData> = [
 		name: 'ammonite_head',
 		url: AppRoute.DocsTemplatesAmmoniteHead,
 		bookmarks: []
+	},
+	{
+		name: 'head_with_anchor',
+		url: AppRoute.DocsTemplatesAnchoredHeading,
+		bookmarks: []
 	}
 ];
