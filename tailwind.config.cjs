@@ -79,6 +79,11 @@ const config = {
 						secondary: '#f4f4f5',
 						tertiary: '#e4e4e7',
 						link: '#059669'
+					},
+					border: {
+						primary: '#f4f4f5',
+						secondary: '#e4e4e7',
+						tertiary: '#71717a'
 					}
 				},
 				light: {
@@ -98,6 +103,11 @@ const config = {
 						primary: '#000000',
 						secondary: '#18181b',
 						tertiary: '#27272a'
+					},
+					border: {
+						primary: '#18181b',
+						secondary: '#27272a',
+						tertiary: '#71717a'
 					}
 				}
 			},

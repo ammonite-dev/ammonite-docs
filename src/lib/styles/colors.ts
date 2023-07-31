@@ -116,30 +116,25 @@ export const BORDER_COLOR: Record<BorderColor, string> = {
 	primary: 'border-light-border-primary dark:border-dark-border-primary',
 	secondary: 'border-light-border-secondary dark:border-dark-border-secondary',
 	tertiary: 'border-light-border-tertiary dark:border-dark-border-tertiary',
-	'accent-primary': 'border-light-border-accent-primary dark:border-dark-border-accent-primary',
-	'accent-secondary':
-		'border-light-border-accent-secondary dark:border-dark-border-accent-secondary',
-	'accent-tertiary': 'border-light-border-accent-tertiary dark:border-dark-border-accent-tertiary'
+	'accent-primary': 'border-light-accent-primary dark:border-dark-accent-primary',
+	'accent-secondary': 'border-light-accent-secondary dark:border-dark-accent-secondary',
+	'accent-tertiary': 'border-light-accent-tertiary dark:border-dark-accent-tertiary'
 };
 export const BORDER_COLOR_REVERSE: Record<BorderColor, string> = {
 	none: '',
 	primary: 'border-dark-border-primary dark:border-light-border-primary',
 	secondary: 'border-dark-border-secondary dark:border-light-border-secondary',
 	tertiary: 'border-dark-border-tertiary dark:border-light-border-tertiary',
-	'accent-primary': 'border-dark-border-accent-primary dark:border-light-border-accent-primary',
-	'accent-secondary':
-		'border-dark-border-accent-secondary dark:border-light-border-accent-secondary',
-	'accent-tertiary': 'border-dark-border-accent-tertiary dark:border-light-border-accent-tertiary'
+	'accent-primary': 'border-dark-accent-primary dark:border-light-accent-primary',
+	'accent-secondary': 'border-dark-accent-secondary dark:border-light-accent-secondary',
+	'accent-tertiary': 'border-dark-accent-tertiary dark:border-light-accent-tertiary'
 };
 export const BORDER_COLOR_FOCUS: Record<BorderColor, string> = {
 	none: '',
 	primary: 'focus:border-light-border-primary focus:dark:border-dark-border-primary',
 	secondary: 'focus:border-light-border-secondary focus:dark:border-dark-border-secondary',
 	tertiary: 'focus:border-light-border-tertiary focus:dark:border-dark-border-tertiary',
-	'accent-primary':
-		'focus:border-light-border-accent-primary focus:dark:border-dark-border-accent-primary',
-	'accent-secondary':
-		'focus:border-light-border-accent-secondary focus:dark:border-dark-border-accent-secondary',
-	'accent-tertiary':
-		'focus:border-light-border-accent-tertiary focus:dark:border-dark-border-accent-tertiary'
+	'accent-primary': 'focus:border-light-accent-primary focus:dark:border-dark-accent-primary',
+	'accent-secondary': 'focus:border-light-accent-secondary focus:dark:border-dark-accent-secondary',
+	'accent-tertiary': 'focus:border-light-accent-tertiary focus:dark:border-dark-accent-tertiary'
 };
