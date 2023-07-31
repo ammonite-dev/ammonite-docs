@@ -20,8 +20,8 @@
 	</p>
 	<div class="h-4" />
 	<p>
-		{COMPANY_NAME} allow users to configure these using a custom built-in template:
-		<a href={AppRoute.DocsTemplatesAmmoniteHead}>ammonite_head</a>
+		{COMPANY_NAME} allow users to configure this metadata using a YAML at the top of each page:
+		<a href={AppRoute.DocsSyntaxMetadata}>See Metadata</a>
 	</p>
 	<h4>Example HTML</h4>
 	<pre><code

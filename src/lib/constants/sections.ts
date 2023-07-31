@@ -6,6 +6,21 @@ export type SubsectionData = {
 	bookmarks?: Array<SubsectionData>;
 };
 
+export enum Section {
+	Introduction,
+	Website101,
+	Syntax,
+	Templates,
+	BuiltInTemplates
+}
+
+export type SectionData = {
+	section: Section;
+	name: string;
+	url?: string;
+	subsections: Array<SubsectionData>;
+};
+
 export const INTRODUCTION_SECTION: Array<SubsectionData> = [
 	{
 		name: 'Why Markdown?',
@@ -71,6 +86,10 @@ export const SYNTAX_SECTION: Array<SubsectionData> = [
 		url: AppRoute.DocsSyntaxLinks
 	},
 	{
+		name: 'Tables',
+		url: AppRoute.DocsSyntaxTable
+	},
+	{
 		name: 'Raw HTML',
 		url: AppRoute.DocsSyntaxRawHTML
 	}
@@ -90,13 +109,41 @@ export const TEMPLATES_SECTION: Array<SubsectionData> = [
 
 export const BUILTIN_TEMPLATES_SECTION: Array<SubsectionData> = [
 	{
-		name: 'ammonite_head',
-		url: AppRoute.DocsTemplatesAmmoniteHead,
-		bookmarks: []
-	},
-	{
 		name: 'head_with_anchor',
 		url: AppRoute.DocsTemplatesAnchoredHeading,
 		bookmarks: []
+	}
+];
+
+export const SECTIONS: Array<SectionData> = [
+	{
+		section: Section.Introduction,
+		name: 'Introduction',
+		url: AppRoute.DocsHome,
+		subsections: INTRODUCTION_SECTION
+	},
+	{
+		section: Section.Website101,
+		name: 'Website 101',
+		url: AppRoute.DocsWebsite101,
+		subsections: WEBSITE101_SECTION
+	},
+	{
+		section: Section.Syntax,
+		name: 'Syntax',
+		url: AppRoute.DocsSyntax,
+		subsections: SYNTAX_SECTION
+	},
+	{
+		section: Section.Templates,
+		name: 'Templates',
+		url: AppRoute.DocsTemplates,
+		subsections: TEMPLATES_SECTION
+	},
+	{
+		section: Section.BuiltInTemplates,
+		name: 'Built-in Templates',
+		url: AppRoute.DocsTemplatesBuiltIn,
+		subsections: BUILTIN_TEMPLATES_SECTION
 	}
 ];

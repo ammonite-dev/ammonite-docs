@@ -1,0 +1,62 @@
+.tech_doc a {
+	@apply text-light-accent-primary hover:text-light-accent-secondary duration-300;
+	@apply dark:text-dark-accent-primary dark:hover:text-dark-accent-secondary duration-300;
+}
+
+.tech_doc h1 {
+	@apply pt-2 pb-1 text-4xl font-bold overflow-auto;
+}
+
+.tech_doc h2 {
+	@apply pt-3 pb-1 text-3xl font-bold;
+}
+
+.tech_doc h3 {
+	@apply pt-3 pb-1 text-2xl font-bold;
+}
+
+.tech_doc h4 {
+	@apply pt-3 pb-1 text-xl font-bold;
+}
+
+.tech_doc h5 {
+	@apply pt-3 pb-1 text-lg font-bold;
+}
+
+.tech_doc h6 {
+	@apply pt-3 pb-0.5 font-bold;
+}
+
+.tech_doc pre {
+	@apply border-light-accent-primary dark:border-dark-accent-primary border mx-1 my-3 font-mono;
+	@apply bg-slate-300 dark:bg-slate-800/50 p-4 rounded-lg overflow-auto;
+}
+
+.tech_doc .inline_code {
+	@apply border-light-accent-primary dark:border-dark-accent-primary border;
+	@apply font-mono bg-light-accent-primary/[.3] dark:bg-dark-accent-primary/[.3] mx-1 px-1.5 py-0.5 rounded-lg;
+}
+
+.tech_doc ul {
+	@apply pl-6 my-2 list-disc;
+}
+
+.tech_doc ul li {
+	@apply my-1;
+}
+
+.tech_doc ol {
+	@apply pl-6 my-2 list-decimal;
+}
+
+.tech_doc ol li {
+	@apply my-1;
+}
+
+.tech_doc table th {
+	@apply bg-light-accent-primary/[0.4] dark:bg-dark-accent-primary/[.4] px-2 py-1 font-bold border;
+}
+
+.article_preview {
+	@apply m-2;
+}

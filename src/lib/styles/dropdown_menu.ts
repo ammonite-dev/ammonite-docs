@@ -1,5 +1,4 @@
-import { BACKGROUND_COLOR, BACKGROUND_COLOR_HOVER } from '$lib/constants/colors';
-import { FONT_SIZES } from './fonts';
+import { BACKGROUND_COLOR, BACKGROUND_COLOR_HOVER, BORDER_COLOR } from '$lib/styles/colors';
 
 export const DROPDOWN_MENU_STYLE = `
     block absolute top-0 right-0
@@ -9,11 +8,14 @@ export const DROPDOWN_MENU_STYLE = `
     mt-2
     z-100
     border
-    ${BACKGROUND_COLOR['secondary']}
+    overflow-hidden
+    ${BORDER_COLOR['primary']}
+    ${BACKGROUND_COLOR['primary']}
     `;
 
 export const DROPDOWN_OPEN_STYLE = `
     ${DROPDOWN_MENU_STYLE}
+    shadow-xl
     opacity-100
 `;
 export const DROPDOWN_CLOSE_STYLE = `
@@ -26,7 +28,6 @@ export const DROPDOWN_CLOSE_STYLE = `
 export const DROPDOWN_ITEM_STYLE = `
     px-4 py-3
     w-full
-    ${BACKGROUND_COLOR_HOVER['accentTertiary']}
-    ${FONT_SIZES['text']}
+    ${BACKGROUND_COLOR_HOVER['primary']}
     duration-300
 `;

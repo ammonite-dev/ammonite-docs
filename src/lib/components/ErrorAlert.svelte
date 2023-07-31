@@ -1,8 +1,11 @@
+<script>
+	import { BACKGROUND_COLOR } from '$lib/styles/colors';
+</script>
+
 <div
 	class="
-		bg-errorDark/[0.1]
-		border-errorDark
-		border rounded-lg
+		{BACKGROUND_COLOR['error']}
+		rounded-md
 		p-4 my-2"
 >
 	<slot />

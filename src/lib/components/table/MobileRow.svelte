@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { BACKGROUND_COLOR, BACKGROUND_COLOR_REVERSE } from '$lib/constants/colors';
-	import { FONT_SIZES } from '$lib/styles/fonts';
+	import { BACKGROUND_COLOR, BACKGROUND_COLOR_REVERSE } from '$lib/styles/colors';
 	import type { TableCell } from '$lib/types/table';
 
 	export let rowNumber: number;
@@ -19,7 +18,7 @@
 	<div class="h-px bg-primary-500" />
 	{#each tableHeaders as header, i}
 		<div class="flex flex-col px-3">
-			<div class="font-bold {FONT_SIZES['lg']}">{header}</div>
+			<div class="font-bold text-lg">{header}</div>
 			<div>{tableRow[i].value}</div>
 		</div>
 		<div class="h-3" />

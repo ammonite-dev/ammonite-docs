@@ -1,11 +1,11 @@
-import { BACKGROUND_COLOR, FONT_COLOR_HOVER } from '$lib/constants/colors';
+export const ARTICLE_PADDING_STYLE = `
+    sm:px-12 sm:pb-8 px-4 pb-2
+`;
 
 export const ARTICLE_STYLE = `
-    ${BACKGROUND_COLOR['tertiary']}
+    ${ARTICLE_PADDING_STYLE}
     min-h-screen
     rounded-t-xl
-    sm:px-12 sm:pb-8
-    px-4 pb-2
     z-0
     overflow-x-auto
     `;
@@ -23,5 +23,5 @@ export const PAGE_ACTION_STYLE = `
     duration-300
     sm:mb-2 sm:ml-6
     mb-1 ml-6
-    ${FONT_COLOR_HOVER['accentPrimary']}
+    hover:opacity-75
 `;

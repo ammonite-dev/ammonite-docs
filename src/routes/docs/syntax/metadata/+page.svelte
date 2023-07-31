@@ -1,7 +1,52 @@
-<script>
+<script lang="ts">
 	import { code_to_html } from '$lib/api/local/syntax';
+	import ResponsiveTable from '$lib/components/table/ResponsiveTable.svelte';
 	import { COMPANY_NAME } from '$lib/constants/company';
 	import { AppRoute } from '$lib/constants/routes';
+	import { TABLE_CELL_STYLE } from '$lib/styles/table';
+
+	const TABLE_HEADERS = ['Name', 'Type', 'Description'];
+
+	const PARAMETERS = [
+		[
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'version' },
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'int' },
+			{
+				classes: TABLE_CELL_STYLE,
+				value:
+					'As the platform grows, new features will be added and a versioning system is required to indicate what features should be available'
+			}
+		],
+		[
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'page' },
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'Object' },
+			{ classes: TABLE_CELL_STYLE, value: 'Sets the metadata of the web page' }
+		]
+	];
+
+	const PAGE_PARAMETERS = [
+		[
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'title' },
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'String' },
+			{ classes: TABLE_CELL_STYLE, value: 'Sets the title of the web page' }
+		],
+		[
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'description' },
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'String' },
+			{
+				classes: TABLE_CELL_STYLE,
+				value: 'Sets the description of the web page for Google Search, Twitter preview, etc.'
+			}
+		],
+		[
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'thumbnail_url' },
+			{ classes: `${TABLE_CELL_STYLE} font-mono`, value: 'String' },
+			{
+				classes: TABLE_CELL_STYLE,
+				value: 'Sets the thumbnail image of the web page for Google Search, Twitter preview, etc.'
+			}
+		]
+	];
 </script>
 
 <div class="tech_doc">
@@ -15,7 +60,7 @@
 			<li>The preview description of the page (when you share links with friends)</li>
 			<li>Whether a bot should scrape this website (like Google's search engine)</li>
 		</uL>
-		{COMPANY_NAME} allow users to configure these using a custom built-in "template".
+		{COMPANY_NAME} allow users to configure these using a YAML config at the top of each page.
 	</p>
 	<h2>Usage</h2>
 	<p>
@@ -29,16 +74,44 @@
 	</p>
 	<pre><code
 			>{@html code_to_html(
-				'json',
-				`\`\`\`ammonite_head
-{
-    "version": 1,
-    "data": {
-		"title": "My first page with a title",
-	}
-}
-\`\`\``
+				'yaml',
+				`---
+version: 1
+page:
+  title: My first page with a title
+  description: Hello world
+---
+`
 			)}</code
 		></pre>
-	<p>To learn more, checkout <a href={AppRoute.DocsTemplatesAmmoniteHead}>ammonite_head</a></p>
+	<h2>Parameters</h2>
+	<ResponsiveTable tableHeaders={TABLE_HEADERS} tableRows={PARAMETERS} />
+
+	<h4>Page Parameters</h4>
+	<ResponsiveTable tableHeaders={TABLE_HEADERS} tableRows={PAGE_PARAMETERS} />
+	<h2>Example</h2>
+	<pre><code
+			>{@html code_to_html(
+				'yaml',
+				`---
+version: 1
+page:
+  title: My web page title
+  description: This is my web page
+  thumbnail_url: https://ammonite.dev/assets/abc.png
+---`
+			)}</code
+		></pre>
 </div>
+
+<style>
+	table {
+		border-color: #aaaaaa;
+	}
+
+	.py-2 px-4 {
+		min-width: 0;
+		padding: 0.5rem 1rem;
+		border-width: 1px;
+	}
+</style>

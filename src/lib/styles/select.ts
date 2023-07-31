@@ -1,4 +1,4 @@
-import { BACKGROUND_COLOR, FONT_COLOR } from '$lib/constants/colors';
+import { BACKGROUND_COLOR, FONT_COLOR } from '$lib/styles/colors';
 
 export const SELECT_STYLE = `
     ${BACKGROUND_COLOR['tertiary']}

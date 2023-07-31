@@ -1,16 +1,3 @@
-export const OUTLINE_BUTTON_STYLE = `
-    py-2 px-6 rounded-full
-    duration-300
-    bg-transparent
-    border-solid border-2
-    text-black
-    dark:text-white
-    border-black
-    dark:border-white
-    hover:bg-black/25
-    hover:dark:bg-white/25
-    `;
-
 export const CTA_BUTTON_STYLE = `
     text-white
     py-2 px-6 rounded-full
@@ -24,15 +11,106 @@ export const CTA_BUTTON_STYLE = `
     disabled:opacity-75
     `;
 
-export const PRIMARY_BUTTON_STYLE = `
-    text-black
-    font-bold
-    py-2 px-6 rounded-full
-    duration-300
+const LARGE_BUTTON_1 = `
     cursor-pointer
-    bg-primary-500
-    hover:bg-primary-300
+    duration-300
+    rounded-lg
+    sm:py-2.5 sm:px-5
+    py-2.5 px-4
+`;
+
+const SMALL_BUTTON_1 = `
+    cursor-pointer
+    duration-300
+    rounded-lg
+    sm:py-1.5 sm:px-4
+    py-1.5 px-2.5
+`;
+
+const MEDIUM_BUTTON_1 = `
+    cursor-pointer
+    duration-300
+    rounded-lg
+    sm:py-2 sm:px-5
+    py-2 px-3
+`;
+
+export const PRIMARY_BUTTON_MEDIUM_STYLE = `
+    ${MEDIUM_BUTTON_1}
+    font-bold
+
+    text-zinc-100
+    dark:text-zinc-800
+
+    bg-zinc-800
+    hover:bg-zinc-700
+
+    dark:bg-zinc-100
+    dark:hover:bg-zinc-300
+
     disabled:cursor-not-allowed
     disabled:opacity-75
-    disabled:bg-primary-500/75
+`;
+
+export const PRIMARY_BUTTON_SMALL_STYLE = `
+    ${SMALL_BUTTON_1}
+    font-bold
+
+    text-zinc-100
+    dark:text-zinc-800
+
+    bg-zinc-800
+    hover:bg-zinc-700
+
+    dark:bg-zinc-100
+    dark:hover:bg-zinc-300
+
+    disabled:cursor-not-allowed
+    disabled:opacity-75
+`;
+
+export const OUTLINE_ERROR_BUTTON_SMALL_STYLE = `
+    ${SMALL_BUTTON_1}
+    font-bold
+
+    bg-transparent
+    border-solid border
+
+    text-red-800
+    dark:text-red-300
+
+    border-re-800
+    dark:border-red-300
+
+    hover:opacity-75
+`;
+
+export const OUTLINE_BUTTON_SMALL_STYLE = `
+    ${SMALL_BUTTON_1}
+    font-bold
+    bg-transparent
+    border-solid border
+
+    text-zinc-800
+    dark:text-zinc-300
+
+    border-zinc-800
+    dark:border-zinc-300
+
+    hover:opacity-75
+`;
+
+export const OUTLINE_BUTTON_MEDIUM_STYLE = `
+    ${MEDIUM_BUTTON_1}
+    font-bold
+    bg-transparent
+    border-solid border
+
+    text-zinc-800
+    dark:text-zinc-300
+
+    border-zinc-800
+    dark:border-zinc-300
+
+    hover:opacity-75
 `;

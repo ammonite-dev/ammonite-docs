@@ -1,11 +1,9 @@
-const colors = require('tailwindcss/colors');
-const defaultTheme = require('tailwindcss/defaultTheme');
-
-const ACCENT = {
-	100: '#EAD7D7',
-	300: '#C7A8C6',
-	500: '#A06A9D',
-	900: '#6D466B'
+const SEA_PALETTE = {
+	100: '#CAE9FF',
+	200: '#BEE9E8',
+	300: '#62B6CB',
+	500: '#5FA8D3',
+	700: '#1B4965'
 };
 
 const PALETTE_1 = {
@@ -20,8 +18,7 @@ const BRAND_PRIMARY = {
 	100: '#FDE9D8',
 	300: '#FBD4B1',
 	500: '#F8B377',
-	700: '#FF963A',
-	900: '#a14a00'
+	700: '#FF963A'
 };
 
 const BRAND_SECONDARY = {
@@ -36,6 +33,7 @@ const config = {
 	darkMode: 'class',
 	content: [
 		'./src/**/*.{html,js,svelte,ts,rs,liquid}',
+		// 2. Append the path for the Skeleton NPM package and files:
 		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
 	],
 	theme: {
@@ -58,53 +56,48 @@ const config = {
 				normal: '14px'
 			},
 			fontFamily: {
-				sans: ['Roboto', 'sans'],
-				serif: ['Roboto', 'sans-serif'],
-				mono: ['Fira Code', 'monospace'],
-				logo: ['Poppins', 'sans']
+				sans: ['Nunito', 'sans'],
+				serif: ['Nunito', 'sans-serif'],
+				mono: ['Fira Code', 'monospace']
 			},
 			colors: {
-				errorDark: '#f8183e',
-				errorLight: '#e695a3',
-				successDark: '#07D95A',
-				successLight: '#9CF0BD',
-				primary: BRAND_PRIMARY,
-				secondary: BRAND_SECONDARY,
-				palette: PALETTE_1,
-				light: {
-					primary: PALETTE_1[900],
-					secondary: PALETTE_1[500],
-					tertiary: PALETTE_1[300],
+				dark: {
+					accent: {
+						primary: PALETTE_1[300],
+						secondary: PALETTE_1[500],
+						tertiary: PALETTE_1[900]
+					},
 					bg: {
-						primary: '#ddd8cf',
-						secondary: '#efece3',
-						tertiary: '#e5e0d1'
+						primary: '#000000',
+						secondary: '#18181b',
+						tertiary: '#27272a',
+						error: '#991b1b',
+						success: '#07d95a'
 					},
 					text: {
-						primary: '#0f0f0f',
-						secondary: '#1c1c1c',
-						tertiary: '#494949'
-					},
-					system: {
-						error: '#e57373'
+						primary: '#ffffff',
+						secondary: '#f4f4f5',
+						tertiary: '#e4e4e7',
+						link: '#059669'
 					}
 				},
-				dark: {
-					primary: PALETTE_1[300],
-					secondary: PALETTE_1[500],
-					tertiary: PALETTE_1[900],
+				light: {
+					accent: {
+						primary: PALETTE_1[900],
+						secondary: PALETTE_1[500],
+						tertiary: PALETTE_1[300]
+					},
 					bg: {
-						primary: '#1e1e21',
-						secondary: '#232326',
-						tertiary: '#2b2c2f'
+						primary: '#ffffff',
+						secondary: '#f4f4f5',
+						tertiary: '#e4e4e7',
+						error: '#f8183e',
+						success: '#059669'
 					},
 					text: {
-						primary: '#f0f0f0',
-						secondary: '#ececec',
-						tertiary: '#aaaaaa'
-					},
-					system: {
-						error: '#e57373'
+						primary: '#000000',
+						secondary: '#18181b',
+						tertiary: '#27272a'
 					}
 				}
 			},

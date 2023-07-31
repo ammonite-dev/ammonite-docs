@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { LOGO_NAME } from '$lib/constants/company';
-	import { BACKGROUND_COLOR, FONT_COLOR } from '$lib/constants/colors';
+	import { BACKGROUND_COLOR, FONT_COLOR } from '$lib/styles/colors';
 	import HeaderLink from '$lib/components/header/HeaderLink.svelte';
 
 	import { AppRoute } from '$lib/constants/routes';
-	import { FONT_SIZES } from '$lib/styles/fonts';
 
 	const HEADER_STYLE = `
 		${BACKGROUND_COLOR['primary']}
@@ -13,7 +12,7 @@
 		py-1
 		sm:px-6 px-3
 		overflow-visible
-		${FONT_SIZES['subtitle']}
+		text-lg
 	`;
 </script>
 

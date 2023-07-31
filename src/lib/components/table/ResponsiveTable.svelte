@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { BACKGROUND_COLOR } from '$lib/constants/colors';
+	import { BACKGROUND_COLOR } from '$lib/styles/colors';
 	import { SELECT_STYLE } from '$lib/styles/select';
 	import type { TableCell } from '$lib/types/table';
 	import ErrorAlert from '../ErrorAlert.svelte';

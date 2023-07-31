@@ -25,6 +25,7 @@ export enum AppRoute {
 	DocsSyntaxCodeBlocks = '/docs/syntax/code_blocks',
 	DocsSyntaxImages = '/docs/syntax/images',
 	DocsSyntaxLinks = '/docs/syntax/links',
+	DocsSyntaxTable = '/docs/syntax/tables',
 	DocsSyntaxRawHTML = '/docs/syntax/raw_html',
 
 	DocsTemplates = '/docs/templates',
@@ -32,7 +33,6 @@ export enum AppRoute {
 	DocsTemplatesCustom = '/docs/templates/custom',
 	DocsTemplatesBuiltIn = '/docs/templates/built_in',
 
-	DocsTemplatesAmmoniteHead = '/docs/templates/built_in/ammonite_head',
 	DocsTemplatesAnchoredHeading = '/docs/templates/built_in/anchored_heading'
 }
 

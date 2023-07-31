@@ -1,3 +1,9 @@
+const BASE_LINK_1 = `
+    duration-300
+`;
+
 export const LINK_STYLE = `
-    text-primary-500
+    ${BASE_LINK_1}
+    text-sea-500
+    hover:text-sea-300
 `;

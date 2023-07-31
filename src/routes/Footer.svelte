@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { FOOTER_ITEMS } from '$lib/constants/footer';
-	import { BACKGROUND_COLOR, FONT_COLOR, FONT_COLOR_HOVER } from '$lib/constants/colors';
+	import { BACKGROUND_COLOR, FONT_COLOR, FONT_COLOR_HOVER } from '$lib/styles/colors';
 	import ToggleTheme from '$lib/components/ToggleTheme.svelte';
 
 	const footer = `
@@ -25,8 +25,8 @@
 	`;
 
 	const footerLinkHovered = `
-		${FONT_COLOR['accentPrimary']}
-		${FONT_COLOR_HOVER['accentSecondary']}
+		${FONT_COLOR['accent-primary']}
+		${FONT_COLOR_HOVER['accent-secondary']}
 		ease-in
 		duration-300
 	`;

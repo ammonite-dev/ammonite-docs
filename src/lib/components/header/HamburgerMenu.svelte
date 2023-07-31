@@ -8,7 +8,9 @@
 		HAMBURGER_MENU_OPENED
 	} from '$lib/styles/hamburger';
 	import ToggleTheme from '$lib/components/ToggleTheme.svelte';
-	import { FONT_COLOR, FONT_COLOR_HOVER } from '$lib/constants/colors';
+	import { FONT_COLOR, FONT_COLOR_HOVER } from '$lib/styles/colors';
+	import IconBars from '../icons/IconBars.svelte';
+	import IconClose from '../icons/IconClose.svelte';
 
 	export let open: boolean;
 
@@ -27,20 +29,15 @@
 		hover:bg-light-primary
 		hover:dark:bg-dark-primary"
 		>
-			<div class={HAMBURGER_BUTTON_1} />
-			<div class={HAMBURGER_BUTTON_1} />
-			<div class={HAMBURGER_BUTTON_1} />
-			<div class={HAMBURGER_BUTTON_1} />
+			<IconBars class="w-6" />
 		</div>
 	</button>
 	<div class={open ? HAMBURGER_MENU_OPENED : HAMBURGER_MENU_CLOSED}>
 		<div class="flex flex-col items-start">
 			<div class="flex justify-end w-full pt-2 px-6">
-				<div class="{FONT_COLOR['primary']} {FONT_COLOR_HOVER['accentPrimary']}">
+				<div class="{FONT_COLOR['primary']} {FONT_COLOR_HOVER['accent-primary']}">
 					<button on:click={toggleMenu}>
-						<div class={HAMBURGER_BUTTON_1_OPEN} />
-						<div class={HAMBURGER_BUTTON_2_OPEN} />
-						<div class={HAMBURGER_BUTTON_3_OPEN} />
+						<IconClose class="w-6" />
 					</button>
 				</div>
 			</div>

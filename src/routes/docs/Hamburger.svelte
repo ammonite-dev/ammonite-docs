@@ -1,26 +1,18 @@
 <script lang="ts">
-	import { FONT_SIZES, FONT_WEIGHT } from '$lib/styles/fonts';
-	import { SECTIONS } from '$lib/constants/table_of_contents';
-	import { FONT_COLOR, FONT_COLOR_HOVER } from '$lib/constants/colors';
-	import {
-		HAMBURGER_BUTTON_1,
-		HAMBURGER_BUTTON_1_OPEN,
-		HAMBURGER_BUTTON_2_OPEN,
-		HAMBURGER_BUTTON_3_OPEN,
-		HAMBURGER_MENU_CLOSED,
-		HAMBURGER_MENU_OPENED
-	} from '$lib/styles/hamburger';
+	import { SECTIONS } from '$lib/constants/sections';
+	import { FONT_COLOR, FONT_COLOR_HOVER } from '$lib/styles/colors';
+	import { HAMBURGER_BUTTON_1 } from '$lib/styles/hamburger';
 	import { page } from '$app/stores';
 	import { drawerStore } from '@skeletonlabs/skeleton';
 
 	const SECTION_STYLE = `
-        ${FONT_SIZES['lg']} ${FONT_WEIGHT['bold']}
+		text-lg font-bold
         pt-4 pb-2
     `;
 
 	const SECTION_LINK_STYLE = `
 		duration-300
-		${FONT_COLOR_HOVER['accentPrimary']}
+		${FONT_COLOR_HOVER['accent-primary']}
     `;
 
 	const SECTION_ITEM_STYLE_SHARED = `
@@ -31,11 +23,11 @@
 	const SECTION_ITEM_STYLE_DEFAULT = `
         ${SECTION_ITEM_STYLE_SHARED}
         text-gray-300
-        ${FONT_COLOR_HOVER['accentPrimary']}
+        ${FONT_COLOR_HOVER['accent-primary']}
     `;
 	const SECTION_ITEM_STYLE_SELECTED = `
         ${SECTION_ITEM_STYLE_SHARED}
-        ${FONT_COLOR['accentPrimary']}
+        ${FONT_COLOR['accent-primary']}
     `;
 
 	const toggleMenu = () => {

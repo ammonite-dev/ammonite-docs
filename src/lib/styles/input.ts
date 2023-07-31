@@ -1,22 +1,24 @@
-import { FONT_SIZES, FONT_WEIGHT } from '$lib/styles/fonts';
+import {
+	BACKGROUND_COLOR,
+	BORDER_COLOR,
+	BORDER_COLOR_FOCUS,
+	BORDER_COLOR_REVERSE
+} from '$lib/styles/colors';
 
 export const INPUT_LABEL_STYLE = `
-    ${FONT_SIZES['label']}
-    ${FONT_WEIGHT['bold']}
+    text-base
+    font-bold
 `;
 
 export const INPUT_STYLE = `
     my-1
     px-2 py-2
     rounded-md
-    ${FONT_SIZES['text']}
     outline-none
     border-2
-    border-gray-400
-    focus:border-light-accentPrimary
-    dark:focus:border-dark-primary
-    bg-light-bg-secondary
-    dark:bg-dark-bg-secondary
+    ${BORDER_COLOR_REVERSE['tertiary']}
+    ${BORDER_COLOR_FOCUS['tertiary']}
+    ${BACKGROUND_COLOR['secondary']}
 `;
 
 export const INPUT_SUBMIT_STYLE = `

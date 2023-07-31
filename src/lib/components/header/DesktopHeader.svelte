@@ -2,10 +2,9 @@
 	import { navigating, page } from '$app/stores';
 
 	import { DropdownMenu, headerMenuState } from '$lib/api/local/header_state';
-	import { BACKGROUND_COLOR_HOVER, FONT_COLOR } from '$lib/constants/colors';
+	import { BACKGROUND_COLOR_HOVER, FONT_COLOR } from '$lib/styles/colors';
 	import ProfileButton from '$lib/components/header/ProfileButton.svelte';
 	import ToggleTheme from '$lib/components/ToggleTheme.svelte';
-	import { FONT_SIZES } from '$lib/styles/fonts';
 
 	import { jwt_decoded } from '$lib/api/local/storage';
 	import * as StorageApi from '$lib/api/local/storage';
@@ -16,7 +15,7 @@
 		px-4 py-3
 		w-full
 		${BACKGROUND_COLOR_HOVER['accentTertiary']}
-		${FONT_SIZES['text']}
+		font-lg
 		duration-300
 	`;
 
@@ -31,7 +30,7 @@
 	$: if ($navigating) resetHeaderMenu();
 </script>
 
-<div class={`flex flex-row ${FONT_SIZES['lg']} items-center`}>
+<div class="flex flex-row text-lg items-center">
 	{#if jwt_decoded === undefined}
 		<div />
 	{/if}

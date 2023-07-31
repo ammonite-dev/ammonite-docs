@@ -3,19 +3,19 @@
 	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	// This contains the bulk of Skeletons required styles:
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
-	import '../app.postcss';
+
+	import '../style/app.postcss';
 
 	import { navigating, page } from '$app/stores';
 
 	import { darkTheme } from '$lib/api/local/theme';
-	import { BACKGROUND_COLOR, FONT_COLOR } from '$lib/constants/colors';
+	import { BACKGROUND_COLOR, FONT_COLOR } from '$lib/styles/colors';
 
 	import Navbar from './Header.svelte';
 	import Footer from './Footer.svelte';
 	import { Diamonds } from 'svelte-loading-spinners';
 	import { Drawer, drawerStore } from '@skeletonlabs/skeleton';
 	import Sidebar from './docs/Sidebar.svelte';
-	import { PRIMARY_BUTTON_STYLE } from '$lib/styles/button';
 	import { afterNavigate } from '$app/navigation';
 	import {
 		HAMBURGER_BUTTON_1_OPEN,
@@ -34,8 +34,8 @@
 		font-sans
 		duration-200
 
-		${BACKGROUND_COLOR['secondary']}
 		${FONT_COLOR['primary']}
+		${BACKGROUND_COLOR['primary']}
 		`;
 
 	const MAIN_BODY_STYLE = `
