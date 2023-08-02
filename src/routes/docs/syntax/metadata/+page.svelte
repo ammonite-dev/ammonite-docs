@@ -64,13 +64,12 @@
 	</p>
 	<h2>Usage</h2>
 	<p>
-		To get started, first create a code block at the top of the Markdown document like we would with {COMPANY_NAME}'s
-		templates. Except this time, we will be specifying
-		<span class="inline_code">ammonite_head</span>. Inside this code block, we can specify a JSON
-		object with a version attribute and a title attribute. The version lets us know which version of
-		<span class="inline_code">ammonite_head</span>
-		we want to use, in case we introduce breaking changes in the future. The title lets us set the title
-		of our page.
+		To get started, first create a block separated by three dashes at the top of the Markdown document.
+		Inside this block, we can specify a YAML document with a version attribute and
+		a page attribute. Under the page attribute, we can specify a title attribute.
+		As {COMPANY_NAME} continues to add features, it is necessary to specify what version of 
+		the metadata we want to use, in case there are breaking changes introduced in the future.
+		The title lets us set the title of our page.
 	</p>
 	<pre><code
 			>{@html code_to_html(
